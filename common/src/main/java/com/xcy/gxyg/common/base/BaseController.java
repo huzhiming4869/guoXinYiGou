@@ -23,6 +23,7 @@ public class BaseController {
     public Long getUserId() {
         String token = request.getHeader("token");
         return jwtUtils.getUserId(token);
+        // test
     }
 
     public Long getRoleId() {
@@ -33,7 +34,6 @@ public class BaseController {
     public UserInfoRes getUserInfo(Long userId) {
         return userService.getUserInfo(userId);
     }
-
 
     public String getIp() {
         String ip = request.getHeader("X-Real-IP");
